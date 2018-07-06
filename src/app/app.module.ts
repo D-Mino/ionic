@@ -9,6 +9,8 @@ import { HomePage } from '../pages/home/home';
 import { LoginPageModule } from '../pages/login/login.module';
 import { NotePageModule } from '../pages/note/note.module';
 import { AboutPageModule } from '../pages/about/about.module';
+import { ComponentsModule } from '../components/components.module';
+import { NavbarProvider } from '../providers/navbar/navbar';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { AboutPageModule } from '../pages/about/about.module';
     IonicModule.forRoot(MyApp),
     AboutPageModule,
     LoginPageModule,
-    NotePageModule
+    NotePageModule,
+    ComponentsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -30,7 +33,8 @@ import { AboutPageModule } from '../pages/about/about.module';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    NavbarProvider
   ]
 })
 export class AppModule {}

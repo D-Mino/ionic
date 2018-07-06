@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavbarProvider } from '../../providers/navbar/navbar';
 
 /**
  * Generated class for the LoginPage page.
@@ -15,13 +16,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LoginPage {
 
-  title: string;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.title = 'Login';
+  constructor(public navCtrl: NavController, public navParams: NavParams, public _nav: NavbarProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+    this._nav.title = "Login";
+    this._nav.color = "dark";
   }
 
 }

@@ -9,8 +9,10 @@
       <button ion-item menuClose *ngFor="let page of pages" (click)="openPage(page.page)">
         {{ page.title }}
       </button>
+      <button ion-item menuClose> Close Menu </button>
     </ion-list>
   </ion-content>
 </ion-menu>
-
-<ion-nav id="nav" #nav [root]="rootPage"></ion-nav>
+<navbar [title]="_nav.title" [color]="_nav.color">
+  <ion-nav id="nav" #nav [root]="rootPage"></ion-nav>
+</navbar>

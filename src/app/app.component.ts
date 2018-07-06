@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { AboutPage } from '../pages/about/about';
 import { LoginPage } from '../pages/login/login';
 import { NotePage } from '../pages/note/note';
+import { NavbarProvider } from '../providers/navbar/navbar';
 @Component({
   templateUrl: 'app.html'
 })
@@ -17,7 +18,8 @@ export class MyApp {
   constructor(
     platform: Platform,
     statusBar: StatusBar,
-    splashScreen: SplashScreen
+    splashScreen: SplashScreen,
+    public _nav: NavbarProvider
   ) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
