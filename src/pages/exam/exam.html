@@ -1,4 +1,4 @@
-<ion-content padding>
+<ion-content padding *ngIf="current">
   <div *ngIf="!stop">
     <ion-list radio-group *ngIf="current.type === 'radio'" [(ngModel)]="answerRadio">
       <p>
