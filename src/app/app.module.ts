@@ -11,6 +11,7 @@ import { NotePageModule } from '../pages/note/note.module';
 import { AboutPageModule } from '../pages/about/about.module';
 import { ComponentsModule } from '../components/components.module';
 import { NavbarProvider } from '../providers/navbar/navbar';
+import { ExamPageModule } from '../pages/exam/exam.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NavbarProvider } from '../providers/navbar/navbar';
     AboutPageModule,
     LoginPageModule,
     NotePageModule,
-    ComponentsModule
+    ComponentsModule,
+    ExamPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

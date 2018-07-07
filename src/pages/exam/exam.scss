@@ -1,0 +1,13 @@
+page-exam {
+    .item-block .item-inner {
+        border: none !important;
+    }
+
+    .item-block:last-child {
+        border: none !important;
+    }
+
+    button {
+        float: right;
+    }
+}

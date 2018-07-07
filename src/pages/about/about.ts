@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NavbarProvider } from '../../providers/navbar/navbar';
+import { ExamPage } from '../exam/exam';
 
 /**
  * Generated class for the AboutPage page.
@@ -17,15 +18,18 @@ import { NavbarProvider } from '../../providers/navbar/navbar';
 export class AboutPage {
 
   constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
+    public _navCtrl: NavController,
+    public _navParams: NavParams,
     public _nav: NavbarProvider
   ) {
   }
 
   ionViewDidLoad() {
-    this._nav.title = 'About';
+    this._nav.title = 'Thi Trắc nghiệm';
     this._nav.color = "secondary";
   }
 
+  start() {
+    this._navCtrl.push(ExamPage);
+  }
 }

@@ -1,0 +1,31 @@
+<ion-content padding>
+  <div *ngIf="!stop">
+    <ion-list radio-group *ngIf="current.type === 'radio'" [(ngModel)]="answerRadio">
+      <p>
+        {{ current.title }}
+      </p>
+      <ion-item *ngFor="let item of current.reply">
+        <ion-label>{{ item.content }}</ion-label>
+        <ion-radio [value]="item"></ion-radio>
+      </ion-item>
+    </ion-list>
+    
+    <ion-list *ngIf="current.type === 'checkbox'">
+      <p>
+        {{ current.title }}
+      </p>
+      <ion-item *ngFor="let item of current.reply; let index">
+        <ion-label>{{ item.content }}</ion-label>
+        <ion-checkbox (ionChange)="updateScore(item, $event)"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    
+    <button ion-button (click)="next()">Next</button>
+  </div>
+
+  <div *ngIf="stop">
+    <p>Tông điểm: {{ score * 2 }} / {{ data.length * 2 }}</p>
+    <p>Số câu đúng: {{ score }}</p>
+  </div>
+
+</ion-content>

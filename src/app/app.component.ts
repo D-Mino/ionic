@@ -31,7 +31,7 @@ export class MyApp {
 
       this.pages = [
         { title: 'Trang Tru', page: HomePage },
-        { title: 'About', page: AboutPage },
+        { title: 'Thi Trắc nghiệm', page: AboutPage },
         { title: 'Login', page: LoginPage },
         { title: 'Note', page: NotePage }
       ]
