@@ -21,6 +21,7 @@ export class ExamPage {
   second: number;
   time: string;
   stop: boolean;
+  interVal: any;
 
   current: any;
   index: number;
@@ -54,10 +55,11 @@ export class ExamPage {
 
     this._nav.title = this.time;
     this._nav.color = "primary";
+    this._nav.hidden = false;
 
-    let interval = setInterval(() => {
+    this.interVal = setInterval(() => {
       if (this.stop) {
-        clearInterval(interval);
+        clearInterval(this.interVal);
       }
 
       this.checkTime();
@@ -126,6 +128,15 @@ export class ExamPage {
     this.answerCheckbox = [];
     this.index += 1;
     this.current = this.data[this.index];
+  }
+
+  finish() {
+    this._nav.hidden = true;
+    this._nav.title = "Thi Trắc nghiệm";
+
+    clearInterval(this.interVal);
+
+    this.navCtrl.pop();
   }
 
   updateScore(item, event) {

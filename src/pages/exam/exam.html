@@ -26,6 +26,7 @@
   <div *ngIf="stop">
     <p>Tông điểm: {{ score * 2 }} / {{ data.length * 2 }}</p>
     <p>Số câu đúng: {{ score }}</p>
+    <button ion-button (click)="finish()">Kết Thúc</button>
   </div>
 
 </ion-content>

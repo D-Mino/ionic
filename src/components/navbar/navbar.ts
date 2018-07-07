@@ -8,7 +8,7 @@ export class NavbarComponent {
 
   @Input('title') title: any;
   @Input('color') color: any;
-  text: string;
+  @Input('hidden') hidden: any;
 
   constructor() {}
 

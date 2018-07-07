@@ -1,4 +1,4 @@
-<ion-menu type="overlay" [content]="nav">
+<ion-menu type="overlay" [content]="nav" *ngIf="_nav.hidden">
   <ion-header>
     <ion-toolbar color="secondary">
       <ion-title>Menu</ion-title>
@@ -13,6 +13,6 @@
     </ion-list>
   </ion-content>
 </ion-menu>
-<navbar [title]="_nav.title" [color]="_nav.color">
+<navbar [title]="_nav.title" [color]="_nav.color" [hidden]="_nav.hidden">
   <ion-nav id="nav" #nav [root]="rootPage"></ion-nav>
 </navbar>

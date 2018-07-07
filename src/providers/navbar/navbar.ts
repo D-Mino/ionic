@@ -11,9 +11,11 @@ export class NavbarProvider {
 
   title: string;
   color: string;
+  hidden: boolean;
   constructor() {
     this.title = 'Trang Tru';
     this.color = 'primary';
+    this.hidden = true;
   }
 
 }
